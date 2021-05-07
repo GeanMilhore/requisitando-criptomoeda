@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+.nav-titulo{
+    text-align: center;
+    background-color:rgb(32, 31, 31);
+    padding: 1rem;
+    color: lightgray;
+    margin-bottom: 3rem;
+    font-size: 25pt;
+}
+
+div#coins{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+}
+
+.media{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: rgb(32, 31, 31);
+    color: lightgray;
+    padding: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    width: 6rem;
+    height: 9rem;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.media-body{
+    margin-top: 2rem;
+    font-size: 25px;
+}
+
+/* pop-up info*/
+.info-moeda{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 130vh;
+    z-index: 2000;
+    background-color: rgba(0,0,0,.8);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-moeda.mostrar{
+    display: flex;
+}
+
+.informacoes{
+    font-size: 20pt;
+    padding: 1rem;
+    color: rgb(132, 132, 226);
+}
+
+.informacoes span{
+    color: white;
+}
+
+.informacoes p {
+    margin: 1rem;
+}
+
+.pop-up{
+    position: relative;
+    color: rgb(204, 195, 195);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(39, 37, 37);
+    margin-bottom: 40vh;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.fechar {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    border: none;
+    background-color: transparent;
+    font-size: 12pt;
+    color: white;
+    cursor: pointer;
+}
+
+.fechar:focus{
+    outline: none;
+}
+
+@keyframes pop-up{
+    from {
+        opacity: 0;
+        transform: translate3d(0, -80px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.mostrar.info-moeda{
+    animation: pop-up.3s;
+}
